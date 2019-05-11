@@ -1,0 +1,10 @@
+body{
+  font-family: 'Just Another Hand', cursive;
+  background-image: url('https://images.unsplash.com/photo-1518998053901-5348d3961a04?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=667&q=80');
+}
+h1{
+  color: maroon;
+}
+.jumbotron-fluid{
+  width: 100%;
+}

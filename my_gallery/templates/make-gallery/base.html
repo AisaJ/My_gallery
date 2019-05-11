@@ -1,4 +1,4 @@
-{% load bootstrap3 %}
+{% load bootstrap4 %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +14,7 @@
   {% block styles %}
     {% bootstrap_css %}
     <!--Google fonts-->
-    <link href="https://fonts.googleapis.com/css?family=Just+Another+Hand|Stylish" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Just+Another+Hand|Stylish" rel="stylesheet">
 
     <!-- Font Awesome -->
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
@@ -36,10 +36,11 @@
   {% endblock %}
 </head>
 <body>
-  {% include 'navbar.html' %}
+  
   {% block content %}
-    <h1 class="text-center">" Words are better expressed in visuals. "</h1>
+  {% include 'navbar.html' %}
   {% endblock %}
+
 
   {% block script %}
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
