@@ -14,7 +14,7 @@ class Category(models.Model):
     return self.name
 
 class Image(models.Model):
-  image = models.ImageField(upload_to='image/',default='grad.jpeg')
+  image = models.ImageField(upload_to='image/',default='children.jpg')
   name = models.CharField(max_length=40)
   description = models.TextField()
   location = models.ForeignKey(Location)

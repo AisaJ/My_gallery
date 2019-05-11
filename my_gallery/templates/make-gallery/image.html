@@ -1,0 +1,17 @@
+{% extends 'make-gallery/base.html' %}
+{% block content %}
+{{ block.super }}
+<div class="container added-image">
+  <div class="row new-image">
+    <img src="{{image.image.url}}" alt="Children" class="img-fluid">
+  </div>
+  <div class="row">
+    <h2>{{image.name}}</h2>
+  </div>
+  <div class="row">
+    <p>{{image.description}}</p>
+    <p><footer><cite>[Taken in {{image.location.name}}]</cite></footer></p>
+  </div>
+</div>
+  
+{% endblock %}
