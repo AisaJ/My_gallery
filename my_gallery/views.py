@@ -16,3 +16,16 @@ def image(request,image_id):
   except DoesNotExist:
     raise Http404()
   return render(request,'make-gallery/image.html',{'image':image})
+
+def search_images(request):
+  if 'image' in request.GET and request.GET['image']:
+    search_term = request.GET.get('image')
+    searched_images = Image.search_by_category(search_term)
+    searched_images2 = Image.search_by_location(search_term)
+    message = f'{search_term}'
+
+    return render(request,'make-gallery/search.html',{{"message":message, "images":search_images, "images":searched_images2}})
+
+  else:
+    message = "You haven't searched for any term."
+    return render(request,'make-gallery/search.html',{{"message":message}})
