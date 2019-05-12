@@ -43,10 +43,17 @@ h1{
   padding-top:10%;
 }
 a img{
-  height: 30%;
+  height: 25%;
   width: 30%;
 }
 .collection{
   text-decoration: none;
   outline: none;
+}
+.dropdown-menu{
+  background-color: rgba(0,128,128,0.6);
+  color: maroon;
+}
+.btn-search{
+  background-color: rgba(0,128,128,0.9);
 }

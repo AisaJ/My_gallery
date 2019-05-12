@@ -5,9 +5,10 @@
   <div class="container">
     <div class="row">
       <div class="col-md-12 gallery">
+        <h2 class="text-center"><b>The Awesome Look</b></h2>
         {% for image in all_images %}
        
-      <a data-fancybox="gallery" href="{{image.image.url}}" class="collection" title="{{image.name}}" data-caption="{{image.description}}"><img src="{{image.image.url}}" alt="Zoomed-image">
+      <a data-fancybox="gallery" href="{{image.image.url}}" class="collection" title="{{image.name}}" data-caption="{{image.name}}: {{image.description}}.. [Taken in {{image.location}}]"><img src="{{image.image.url}}" alt="Zoomed-image">
       </a>
     
         {% endfor %}
