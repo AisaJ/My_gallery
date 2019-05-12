@@ -1,0 +1,22 @@
+{% extends 'make-gallery/base.html' %}
+{% block content %}
+  <div class="container-fluid">
+    <div class="row">
+      {% if images %}
+        <h2> Found {{images|length}} results. </h2>
+      {% else %}
+        <h2> Found none images for that term. </h2>
+      {% endif %}
+    </div>
+    <div class="row">
+      {% if images %}
+        {% for image in images %}
+        <div class="col-sm-6 col-md-3">
+          <p>{{category.category}}</p>
+          <p>{{location.location}}</p>
+        </div>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+{% endblock %}
