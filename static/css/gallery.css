@@ -38,3 +38,15 @@ h1{
 .added-image{
   padding-top: 10%;
 }
+.gallery{
+  margin: 0px;
+  padding-top:10%;
+}
+a img{
+  height: 30%;
+  width: 30%;
+}
+.collection{
+  text-decoration: none;
+  outline: none;
+}
