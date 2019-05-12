@@ -8,7 +8,7 @@ def home(request):
 
 def gallery(request):
   all_images = Image.objects.all()
-  return render(request,'gallery.html',{'all_images': all_images})
+  return render(request,'make-gallery/gallery.html',{'all_images': all_images})
 
 def image(request,image_id):
   try:
