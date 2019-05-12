@@ -22,3 +22,13 @@ class Image(models.Model):
 
   def __str__(self):
     return self.name
+
+  @classmethod
+  def search_by_category(cls,search_term):
+    images = cls.objects.filter(category__name__icontains=search_term)
+    return images
+
+  @classmethod
+  def search_by_location(cls,search_term):
+    images = cls.objects.filter(location__name__icontains=search_term)
+    return images
