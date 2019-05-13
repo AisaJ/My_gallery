@@ -29,3 +29,12 @@ def search_images(request):
   else:
     message = "You haven't searched for any term."
     return render(request,'make-gallery/gallery.html',{"message":message})
+
+def image_location(request,location_id):
+  images =  Image.objects.all()
+  try:
+    image_location= Image(request.GET,queryset=location_id)
+  except DoesNotExist:
+    raise Http404()
+  return render(request,'make-gallery/gallery.html')
+  

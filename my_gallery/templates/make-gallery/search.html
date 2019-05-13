@@ -12,7 +12,7 @@
       {% if all_images %}
         {% for category in all_images %}
         <div class="col-sm-6 col-md-3">
-          <p>{{category.image}}</p>
+          <p>{{category.image.url}}</p>
           <p>{{category.location}}</p>
         </div>
         {% endfor %}
