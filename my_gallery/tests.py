@@ -27,4 +27,14 @@ class GalleryTestClass(TestCase):
     Location.object.all().delete()
     Category.object.all().delete()
 
- 
+  def delete_item(self):
+    self.mombasa.save()
+    test_location = Location('mombasa')
+    test_location.save_location
+    self.mombasa.delete()
+    self.assertEqual(len(Location.name),1)
+
+  def test_search_by_category(self):
+    self.kids_weekend.save()
+    instance= Category.objects.get(name=='sports')
+    self.assertTrue(instance.name=='sports')
