@@ -10,7 +10,7 @@
 
       <a data-fancybox="gallery" href="{{image.image.url}}" class="collection" title="{{image.name}}" data-caption="{{image.name}}: {{image.description}}.. [Taken in {{image.location}}]"><img src="{{image.image.url}}" alt="Zoomed-image">
       </a>
-      <span><input type="text" value="Hello World" id="img-link"><a onclick="myFunction()" id="link-text">Image Link</a>
+      <span><input type="text" value="https://galeria-3.herokuapp.com/gallery/#gallery-{{image.id}}" id="img-link" class="link-class"><a onclick="myFunction()" id="link-text">Image Link</a>
       </span>
     
         {% endfor %}

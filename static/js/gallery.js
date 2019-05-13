@@ -32,5 +32,5 @@ $(document).ready(function(){
     }
   });
 
-  $('input').hide()
+  $('.link-class').hide()
 });
