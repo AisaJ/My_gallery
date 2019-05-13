@@ -12,6 +12,9 @@ class Location(models.Model):
   def del_location(self):
     self.delete()
 
+  def update_location(self):
+    self.insert()
+
 class Category(models.Model):
   name = models.CharField(max_length=40)
 
@@ -22,6 +25,9 @@ class Category(models.Model):
 
   def del_category(self):
     self.delete()
+
+  def update_category():
+    self.insert()
 
 class Image(models.Model):
   image = models.ImageField(upload_to='image/',default='children.jpg')
@@ -54,5 +60,5 @@ class Image(models.Model):
 
   @classmethod
   def get_image_by_id(cls,id):
-    image = cls.objects.get.(Image.id)
+    image = cls.objects.get(Image.id)
     return image
