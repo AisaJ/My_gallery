@@ -7,14 +7,30 @@
       <div class="col-md-12 gallery">
         <h2 class="text-center"><b>The Awesome Look</b></h2>
         {% for image in all_images %}
-       
+
       <a data-fancybox="gallery" href="{{image.image.url}}" class="collection" title="{{image.name}}" data-caption="{{image.name}}: {{image.description}}.. [Taken in {{image.location}}]"><img src="{{image.image.url}}" alt="Zoomed-image">
       </a>
+      <span><input type="text" value="Hello World" id="img-link"><a onclick="myFunction()" id="link-text">Image Link</a>
+      </span>
     
         {% endfor %}
       </div>
-      
     </div>
-  </div>
+    <script>
+      function myFunction() {
+    /* Get the text field */
+    var copyText = document.getElementById("img-link");
+  
+    /* Select the text field */
+    copyText.select();
+  
+    /* Copy the text inside the text field */
+    document.execCommand("copy");
+  
+    /* Alert the copied text */
+    alert("Copied the text: " + copyText.value);
+  }
+    </script>
+    </div>
   
 {% endblock %}

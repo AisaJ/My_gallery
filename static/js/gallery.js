@@ -1,6 +1,7 @@
 $(document).ready(function(){
+  
   $('.fancybox').fancybox({
-      beforeShow: function() {
+      afterShow: function() {
         this.title = $(this.element).data("caption");
       }
   });
@@ -12,6 +13,7 @@ $(document).ready(function(){
     preventCaptionOverlap: true,
     arrows: true,
     loop:true,
+    title:{ type:'inside' },
     buttons: [
       "zoom",
       //"share",
@@ -21,6 +23,7 @@ $(document).ready(function(){
       "thumbs",
       "close"
     ],
+    
     animationEffect: "fade",
     selector : '[data-fancybox="gallery"]',
     loop     : true,
@@ -28,4 +31,6 @@ $(document).ready(function(){
       return this.dataset.caption || '';
     }
   });
+
+  $('input').hide()
 });
