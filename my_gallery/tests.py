@@ -32,9 +32,11 @@ class GalleryTestClass(TestCase):
     test_location = Location('mombasa')
     test_location.save_location
     self.mombasa.delete()
-    self.assertEqual(len(Location.name),1)
+    self.assertEqual(len(Location.test_location),1)
 
   def test_search_by_category(self):
     self.kids_weekend.save()
     instance= Category.objects.get(name=='sports')
     self.assertTrue(instance.name=='sports')
+
+
