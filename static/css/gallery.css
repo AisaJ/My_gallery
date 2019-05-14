@@ -67,3 +67,6 @@ a .data-caption{
 #link-text{
   text-decoration: underline;
 }
+.link-class{
+  display:none;
+}
