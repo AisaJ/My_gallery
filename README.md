@@ -8,7 +8,7 @@ This is a gallery web application that showcase images collected and stored. The
 * Clone the project
 * After cloning, inside the project folder, install the virtual environment using `$ virtualenv virtual` or `$ python3.6 -m venv --without-pip virtual`
 * Activate virtual environment `$ source virtual/bin/activate`
-* Run python manage.py runserver to serve the application
+* Run `$ python manage.py runserver` to serve the application
 ## Behavior Driven Development (BDD)
 | General Behavior | Input    | Output   |
 | :------------- | :------------- | :------------- |
